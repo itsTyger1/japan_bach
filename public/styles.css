@@ -446,6 +446,29 @@ h2 {
   font-size: 16px;
   line-height: 1.6;
 }
+
+/* Center all itinerary copy while keeping its icons paired with their labels. */
+.itinerary {
+  text-align: center;
+}
+.section-heading,
+.day-heading {
+  justify-content: center;
+}
+.date,
+.stay,
+.location,
+.period,
+.notes {
+  align-items: center;
+  justify-content: center;
+}
+.schedule > div {
+  text-align: center;
+}
+.day-no {
+  text-align: center;
+}
 @media (max-width: 1000px) {
   .hero-content {
     padding: 26px;
