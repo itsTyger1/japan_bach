@@ -1009,3 +1009,92 @@ h2 {
     width: 100%;
   }
 }
+
+/* Day-specific photo cards for the Japan itinerary. */
+#oct-05 {
+  --day-image: url("https://images.unsplash.com/photo-1607094751416-13c531c1caac?auto=format&fit=crop&w=1800&q=85");
+  --day-position: center 58%;
+}
+#oct-06 {
+  --day-image: url("https://images.unsplash.com/photo-1770134706475-0462ea04c560?auto=format&fit=crop&w=1800&q=85");
+  --day-position: center 44%;
+}
+#oct-07 {
+  --day-image: url("https://images.unsplash.com/photo-1774014045680-62a47ed2f759?auto=format&fit=crop&w=1800&q=85");
+  --day-position: center 38%;
+}
+#oct-08 {
+  --day-image: url("https://images.unsplash.com/photo-1741920852881-5284c70305bd?auto=format&fit=crop&w=1800&q=85");
+  --day-position: center 52%;
+}
+#oct-09 {
+  --day-image: url("https://images.unsplash.com/photo-1757770331497-5bedc6cff62b?auto=format&fit=crop&w=1800&q=85");
+  --day-position: center 42%;
+}
+#oct-10 {
+  --day-image: url("https://images.unsplash.com/photo-1775647862808-a89cbe777705?auto=format&fit=crop&w=1800&q=85");
+  --day-position: center 45%;
+}
+#oct-11 {
+  --day-image: url("https://images.unsplash.com/photo-1762648136811-dc597238ed91?auto=format&fit=crop&w=1800&q=85");
+  --day-position: center 48%;
+}
+.itinerary .day {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin-top: 18px;
+  padding: 32px 26px;
+  border: 1px solid #484b4f;
+  border-radius: 10px;
+  background-color: #17191c;
+  background-image: var(--day-image);
+  background-position: var(--day-position, center);
+  background-size: cover;
+  box-shadow: 0 14px 34px #0000002b;
+  color: #fff;
+}
+.itinerary .day::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: linear-gradient(90deg, #06080bed 0%, #07090cd9 50%, #06080be3 100%);
+}
+.itinerary .day > * {
+  position: relative;
+  z-index: 1;
+}
+.itinerary .day .date span,
+.itinerary .day .day-no,
+.itinerary .day .location,
+.itinerary .day .muted {
+  color: #f1f1f1;
+}
+.itinerary .day .period {
+  color: #ffb5aa;
+  font-weight: 700;
+}
+.itinerary .day .schedule p,
+.itinerary .day .location,
+.itinerary .day .date,
+.itinerary .day .day-no {
+  text-shadow: 0 2px 8px #000;
+}
+.itinerary .day .notes {
+  border: 1px solid #ffffff26;
+  background: #080a0dcc;
+  backdrop-filter: blur(3px);
+}
+.itinerary .day .notes p,
+.itinerary .day .notes a {
+  color: #fff;
+}
+@media (max-width: 600px) {
+  .itinerary .day {
+    padding: 24px 20px;
+  }
+  .itinerary .day::before {
+    background: #06080be6;
+  }
+}
