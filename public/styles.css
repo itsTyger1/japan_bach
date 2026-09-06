@@ -513,10 +513,23 @@ h2 > span {
   font-size: 12px;
   letter-spacing: 1.4px;
 }
-.stay p {
+.stay p,
+.stay a {
   color: #ecebea;
   margin: 5px 0 0;
   font-size: 14px;
+}
+.stay a {
+  display: block;
+  max-width: 470px;
+  line-height: 1.45;
+  text-decoration: underline;
+  text-decoration-color: #ff756280;
+  text-underline-offset: 3px;
+}
+.stay a:hover {
+  color: #ffb5aa;
+  text-decoration-color: currentColor;
 }
 .day {
   display: grid;
@@ -783,7 +796,8 @@ h3 {
   .stay {
     gap: 7px;
   }
-  .stay p {
+  .stay p,
+  .stay a {
     font-size: 14px;
   }
   .stay span {
