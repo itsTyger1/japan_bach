@@ -325,9 +325,8 @@ h1 {
   object-position: 50% 38%;
 }
 .traveler-headshot--tye {
-  object-fit: contain;
-  object-position: center;
-  background: #222326;
+  object-fit: cover;
+  object-position: center 50%;
 }
 .traveler-name h3 {
   margin-bottom: 5px;
