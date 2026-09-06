@@ -169,6 +169,83 @@ h1 {
   font-size: 16px;
   line-height: 1.6;
 }
+.event-grid {
+  gap: 18px;
+}
+.event-card {
+  position: relative;
+  display: flex;
+  min-height: 290px;
+  overflow: hidden;
+  align-items: flex-end;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  isolation: isolate;
+  background: #202123 var(--event-image) center / cover no-repeat;
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+.event-card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(180deg, #05060718 8%, #050607db 78%, #050607f5 100%);
+  transition: background 180ms ease;
+}
+.event-card:hover {
+  border-color: #ff7562;
+  transform: translateY(-3px);
+}
+.event-card:hover::before {
+  background: linear-gradient(180deg, #05060708 8%, #050607c7 78%, #050607ef 100%);
+}
+.event-card:focus-visible {
+  outline-offset: 4px;
+}
+.event-card-content {
+  display: grid;
+  width: 100%;
+  gap: 6px;
+  padding: 26px;
+}
+.event-kicker {
+  color: #ff9b8d;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+.event-card strong {
+  max-width: 460px;
+  color: #fff;
+  font-size: 27px;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+.event-price {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+.event-link {
+  margin-top: 8px;
+  color: #d7d7d7;
+  font-size: 14px;
+}
+.event-photo-credits {
+  margin: 20px 0 0;
+  color: var(--muted-foreground);
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
+.event-photo-credits a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.event-photo-credits a:hover {
+  color: var(--foreground);
+}
 .flight-page {
   max-width: 1120px;
 }
@@ -645,6 +722,15 @@ h3 {
   }
   .info-grid {
     grid-template-columns: 1fr;
+  }
+  .event-card {
+    min-height: 250px;
+  }
+  .event-card-content {
+    padding: 22px;
+  }
+  .event-card strong {
+    font-size: 24px;
   }
   .flight-summary,
   .flight-grid {
