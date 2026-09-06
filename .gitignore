@@ -7,3 +7,5 @@
 *.pem
 .DS_Store
 npm-debug.log*
+/.next/
+next-env.d.ts
