@@ -25,6 +25,9 @@ img {
 * {
   box-sizing: border-box;
 }
+[hidden] {
+  display: none !important;
+}
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 24px;
@@ -168,6 +171,40 @@ h1 {
   color: var(--muted-foreground);
   font-size: 16px;
   line-height: 1.6;
+}
+.places-city-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.places-city-nav a {
+  padding: 12px 18px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--card);
+  font-weight: 700;
+}
+.places-city-nav a:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.places-section + .places-section {
+  margin-top: 48px;
+  padding-top: 42px;
+  border-top: 1px solid var(--border);
+}
+.places-guide {
+  margin: 24px 0 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.places-guide a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 .event-grid {
   gap: 18px;
@@ -718,12 +755,12 @@ h3 {
     margin-top: 12px;
   }
   .trip-nav {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .trip-nav a:nth-child(3) {
+  .trip-nav a:nth-child(2n) {
     border-right: 0;
   }
-  .trip-nav a:nth-child(-n + 3) {
+  .trip-nav a:nth-child(-n + 6) {
     border-bottom: 1px solid var(--border);
   }
   .trip-nav a {
@@ -1112,4 +1149,20 @@ h2 {
   .itinerary .day::before {
     background: #06080be6;
   }
+}
+
+/* Seoul uses the same day cards and schedule layout as Tokyo. */
+.korea-itinerary .day {
+  --day-image: url("https://images.unsplash.com/photo-1697033874451-f353fbfe6463?auto=format&fit=crop&w=1800&q=85");
+  --day-position: center;
+}
+.korea-itinerary .plan-note a { color: #ffb5aa; text-decoration: underline; text-underline-offset: 3px; }
+.travel-reference { margin-block: 28px 48px; }
+.travel-reference > h2 { margin-bottom: 20px; }
+.travel-reference .info-card { text-align: left; }
+.travel-reference .info-card a { color: #ffb5aa; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.travel-reference .help-number { display: inline-block; min-height: 44px; padding-block: 8px; font-size: 24px; font-weight: 700; }
+.travel-reference .info-card p + p { margin-top: 10px; }
+@media (max-width: 600px) {
+  .korea-itinerary .section-heading { flex-direction: column; }
 }

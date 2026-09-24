@@ -1,18 +1,20 @@
 # Japan bachelor trip
 
-A static, responsive itinerary for October 5–11, 2026. Plain HTML and CSS: no runtime JavaScript, framework, database, or third-party npm dependencies.
+A static, responsive itinerary for October 1–11, 2026. It uses plain HTML and CSS with no framework, database, or third-party npm dependencies.
 
 ## Edit
 
-- `public/index.html`: trip details and metadata.
+- `public/index.html`: Japan itinerary and metadata.
+- `public/korea.html`: Seoul itinerary, accommodation, and local help information.
 - `public/styles.css`: responsive layout and styling.
 - `public/favicon.svg`: site icon.
+
 
 The inline icons retain the Lucide artwork used in the original site; see `LICENSE-icons.txt`. The banner photo is hosted on Unsplash and credited in the footer.
 
 ## Build
 
-Run `npm ci`, then `npm run build` with a current Node.js LTS release. The build copies only the three public assets to `dist/`. Open `public/index.html` through a static web server for local development.
+Run `npm ci`, then `npm run build` with a current Node.js LTS release. The build copies the public static asset allowlist to `dist/`. Serve `dist/` through a static web server for local development.
 
 ## Vercel
 

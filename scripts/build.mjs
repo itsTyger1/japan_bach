@@ -15,4 +15,4 @@ await mkdir(resolve(output, 'headshots'), { recursive: true });
 for (const file of ['dylan.png', 'graham.png', 'harrison.png', 'kurtus.png', 'michael.png', 'patrick.png', 'sam.png', 'tye.png']) {
   await copyFile(resolve(root, 'public', 'headshots', file), resolve(output, 'headshots', file));
 }
-console.log('Static site built in dist/ (no dependencies or browser JavaScript).');
+console.log('Static site built in dist/ (no third-party runtime dependencies).');
